@@ -1,4 +1,4 @@
-package tests;
+package Tests;
 
 import Pages.BasePage;
 import org.testng.annotations.BeforeMethod;
