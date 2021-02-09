@@ -38,7 +38,7 @@ public class OrangeTest extends BaseTest {
     }
 
     @Test(testName = "Tim - Steps 10 - 12", description = "Log in as 1st Level Supervisor -> Go to News section -> Verify Topic and Description values")
-    public void test3() throws InterruptedException {
+    public void test3() {
         orangePage.logInAsDifferentRole.click();
         orangePage.firstlvlSupervisorBtn.click();
         orangePage.firstLvlMenuAnnouncement.click();
@@ -50,6 +50,5 @@ public class OrangeTest extends BaseTest {
         // need to modify 'Hi All,'
         Assert.assertEquals(orangePage.firstLvlDescription.getText().substring(0, 7), "Hi All,");
 
-        Thread.sleep(5000);
     }
 }
