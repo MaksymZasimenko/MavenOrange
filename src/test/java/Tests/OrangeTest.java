@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import pages.OrangePage;
 
-public class OrangeTest extends tests.BaseTest {
+public class OrangeTest extends BaseTest {
     private OrangePage orangePage;
     @BeforeMethod
     public void localSetUp(){
