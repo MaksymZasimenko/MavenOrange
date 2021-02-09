@@ -4,7 +4,7 @@ import Pages.BasePage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pages.OrangePage;
+import Pages.OrangePage;
 
 public class OrangeTest extends BaseTest {
     private OrangePage orangePage;
@@ -22,10 +22,11 @@ public class OrangeTest extends BaseTest {
         orangePage.click(orangePage.newsAnnouncements);
         orangePage.click(orangePage.viewNewsList);
         BasePage.sleep(2000);
-        orangePage.click(orangePage.addNewsBtn);
 
         orangePage.switchFrame(orangePage.frame1);
         BasePage.sleep(1000);
+
+        orangePage.click(orangePage.addNewsBtn);
         orangePage.titleInput.sendKeys("Test");
         orangePage.switchFrame(orangePage.frame2);
         orangePage.description.sendKeys("Test message");

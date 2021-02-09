@@ -1,4 +1,4 @@
-package pages;
+package Pages;
 
 import Pages.BasePage;
 import org.openqa.selenium.By;
@@ -58,7 +58,7 @@ public class OrangePage extends BasePage {
     @FindBy(xpath = "//tr[@class='dataRaw']//td[7]/i")
     public List<WebElement> attachment;
 
-    @FindBy(className = "large material-icons")
+    @FindBy(xpath = "//i[@class = 'large material-icons']")
     public WebElement addNewsBtn;
     @FindBy(id = "news_topic")
     public WebElement titleInput;

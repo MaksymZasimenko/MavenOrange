@@ -27,7 +27,6 @@ public class BasePage {
 
     public void click(WebElement element){
         waitForElementToBeVisible(element);
-        waitForElementToBeVisible(element);
         highlightElement(element);
         element.click();
 
