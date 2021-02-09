@@ -1,15 +1,10 @@
 package Pages;
 
-import Pages.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 public class OrangePage extends BasePage {
     WebDriver driver;
@@ -64,6 +59,32 @@ public class OrangePage extends BasePage {
     public WebElement titleInput;
     @FindBy(id = "tinymce")
     public WebElement description;
+
+    //---------------------- Tim start---------------------
+    @FindBy(xpath = "//span[@id='account-job']")
+    public WebElement accountJob;
+
+    @FindBy(xpath = "//a[@id='logoutLink']")
+    public WebElement logOut;
+
+    @FindBy(id = "menu_news_viewAnnouncementModule")
+    public WebElement firstLvlMenuAnnouncement;
+
+    @FindBy(id = "menu_news_viewNewsArticles")
+    public WebElement firstLvlNews;
+
+    @FindBy(id = "header")
+    public WebElement firstLvlHeader;
+
+    // need to modify 'Employee Insurance Renewal'
+    @FindBy(xpath = "//div[contains(text(), 'Employee Insurance Renewal')]")
+    public WebElement firstLvlTopic;
+
+    // need to modify 'Hi All,'
+    @FindBy(xpath = "//div[@class='html-content']//p[contains(text(), 'Hi All,')]")
+    public WebElement firstLvlDescription;
+
+    //---------------------- Tim end---------------------
 
     public void switchFrame(WebElement element){
         driver.switchTo().frame(element);
